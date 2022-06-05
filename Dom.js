@@ -48,13 +48,60 @@
 //QuerySelectorAll//
 
 
- let odd=document.querySelectorAll('li:nth-child(odd)');
- for (let i=0;i<odd.length;i++){
-     odd[i].style.backgroundColor='green';
- };
+//  let odd=document.querySelectorAll('li:nth-child(odd)');
+//  for (let i=0;i<odd.length;i++){
+//      odd[i].style.backgroundColor='green';
+//  };
 
- let allsecond=document.querySelectorAll('li');
- allsecond[1].style.color='red';
-// let allseconditem=document.querySelectorAll('li:nth-child(1)');
-// allseconditem.style.fontcolor='red'
+//  let allsecond=document.querySelectorAll('li');
+//  allsecond[1].style.color='green';
+// // let allseconditem=document.querySelectorAll('li:nth-child(1)');
+// // allseconditem.style.fontcolor='red'
 
+//PARENTNODE
+// let itemlist=document.querySelector('#items');
+// itemlist.parentNode.style.backgroundColor='#f4f4f4';
+
+// //PARENTELEMENT
+ let itemlist=document.querySelector('#items');
+ itemlist.parentElement.style.backgroundColor='#f4f4f4';
+
+//Children
+let childlist=document.querySelector('#items');
+
+childlist.children[1].style.background='yellow';
+
+//firstElementChild
+itemlist.firstElementChild.textContent='Hello1';
+
+//Lastelementchild
+itemlist.lastElementChild.textContent='Last Hello';
+
+//Nextelementsibling
+itemlist.nextElementSibling.style.background='purple';
+
+//previouselementsibling
+itemlist.previousElementSibling.style.background='blue';
+
+//Create DIV-Add Class-Add Attributes-Create textnode inside the new div-then add this
+//new div just above <h1> in header and below div having class container .
+ let newdiv=document.createElement('div');
+ newdiv.className='hello';
+newdiv.setAttribute('title','Hello People');
+ let newdivtext=document.createTextNode('Hello World');
+ newdiv.appendChild(newdivtext);
+ let container=document.querySelector('header .container');
+let h1=document.querySelector('header h1');
+ console.log(newdiv);
+container.insertBefore(newdiv, h1);
+
+Now go head and add HEllo word before Item 1
+
+let newele=document.querySelector('div');
+newele.className='Added Hello';
+newele.setAttribute('title', 'Adding Hello');
+let neweletext=document.createTextNode('Added Hello Now');
+newele.appendChild(neweletext);
+let conatainer1=document.querySelector('header .list-group');
+let li=document.querySelector('header li');
+conatainer1.insertBefore(newele,li)
