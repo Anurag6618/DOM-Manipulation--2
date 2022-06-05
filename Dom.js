@@ -25,9 +25,22 @@
 // //Updating the 3rd element in the list with green background
 // items[2].style.backgroundColor='green';
 
-let li=document.getElementsByTagName('li');
-//Adding a new li element without classname in index.html and then editing all li items using getElementsByTagName.
-for (let i=0;i<li.length;i++){
-    li[i].style.fontWeight='bold';
-    li[i].style.color='green';
-}
+// let li=document.getElementsByTagName('li');
+// //Adding a new li element without classname in index.html and then editing all li items using getElementsByTagName.
+// for (let i=0;i<li.length;i++){
+//     li[i].style.fontWeight='bold';
+//     li[i].style.color='green';
+// }
+
+//QuerySelector//
+let header=document.querySelector('#main-header');
+header.style.borderBottom='solid 4px blue';
+
+ let input=document.querySelector('input');
+ input.value='Welcome, Anurag';
+
+let seconditem=document.querySelector('.list-group-item:nth-child(2)');
+seconditem.style.backgroundColor='green';
+
+let thirditem=document.querySelector('.list-group-item:nth-child(3)');
+thirditem.style.color='white'
