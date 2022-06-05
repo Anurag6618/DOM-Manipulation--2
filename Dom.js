@@ -15,12 +15,19 @@
 //header2.style.color='green';
 //header2.style.fontWeight='bold';
 
-var items=document.getElementsByClassName('list-group-item');
-//Making all the list elements Bold.
+// var items=document.getElementsByClassName('list-group-item');
+// //Making all the list elements Bold.
 
-for (let i=0;i<items.length;i++){
-    items[i].style.fontWeight='bold';
+// for (let i=0;i<items.length;i++){
+//     items[i].style.fontWeight='bold';
+// }
+
+// //Updating the 3rd element in the list with green background
+// items[2].style.backgroundColor='green';
+
+let li=document.getElementsByTagName('li');
+//Adding a new li element without classname in index.html and then editing all li items using getElementsByTagName.
+for (let i=0;i<li.length;i++){
+    li[i].style.fontWeight='bold';
+    li[i].style.color='green';
 }
-
-//Updating the 3rd element in the list with green background
-items[2].style.backgroundColor='green';
