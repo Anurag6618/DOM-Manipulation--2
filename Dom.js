@@ -33,14 +33,28 @@
 // }
 
 //QuerySelector//
-let header=document.querySelector('#main-header');
-header.style.borderBottom='solid 4px blue';
+// let header=document.querySelector('#main-header');
+// header.style.borderBottom='solid 4px blue';
 
- let input=document.querySelector('input');
- input.value='Welcome, Anurag';
+//  let input=document.querySelector('input');
+//  input.value='Welcome, Anurag';
 
-let seconditem=document.querySelector('.list-group-item:nth-child(2)');
-seconditem.style.backgroundColor='green';
+// let seconditem=document.querySelector('.list-group-item:nth-child(2)');
+// seconditem.style.backgroundColor='green';
 
-let thirditem=document.querySelector('.list-group-item:nth-child(3)');
-thirditem.style.color='white'
+//let thirditem=document.querySelector('.list-group-item:nth-child(3)');
+// thirditem.style.color='white'
+
+//QuerySelectorAll//
+
+
+ let odd=document.querySelectorAll('li:nth-child(odd)');
+ for (let i=0;i<odd.length;i++){
+     odd[i].style.backgroundColor='green';
+ };
+
+ let allsecond=document.querySelectorAll('li');
+ allsecond[1].style.color='red';
+// let allseconditem=document.querySelectorAll('li:nth-child(1)');
+// allseconditem.style.fontcolor='red'
+
