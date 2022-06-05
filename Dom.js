@@ -95,7 +95,7 @@ let h1=document.querySelector('header h1');
  console.log(newdiv);
 container.insertBefore(newdiv, h1);
 
-Now go head and add HEllo word before Item 1
+//Now go head and add HEllo word before Item 1
 
 let newele=document.querySelector('div');
 newele.className='Added Hello';
