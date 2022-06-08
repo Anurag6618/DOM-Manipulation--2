@@ -17,6 +17,16 @@ function onSubmit(e){
     } else{
         console.log('Success');
         //Adding to local storage
-        localStorage.setItem(nameInput.value,emailInput.value);
+        //localStorage.setItem(nameInput.value,emailInput.value);
+
+        //Using object to store in local storage
+        let User_Details={
+            name:nameInput.value,
+            email:emailInput.value
+        };
+        let User_Details_Serialized=JSON.stringify(User_Details);
+        localStorage.setItem("User_Details",User_Details_Serialized);
+        
+
     }
 }
