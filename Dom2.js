@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded',function(){
+
     let myForm=document.querySelector('#my-form');
     let nameInput=document.querySelector('#name');
     let emailInput=document.querySelector('#email');
@@ -35,11 +35,30 @@ document.addEventListener('DOMContentLoaded',function(){
     
     }
     function OnScreen(user){
+
         let parentnode=document.getElementById('Users');
-        let childHTML=`<li> ${user.name}-${user.email}`;
+        let childHTML=`<li id =${user.email}> ${user.name}-${user.email}
+        <button onclick=deleteuser('${user.email}')>Delete User</button>
+        <button onclick=editUserDetails('${user.email}','${user.name}')>Edit User </button>
+        </li>`;
         parentnode.innerHTML=parentnode.innerHTML+childHTML;
         
     }
+    function editUserDetails(emailId,name){
+        document.getElementById('email').value = emailId;
+        document.getElementById('name').value = name;
+        deleteuser(emailId);
 
-})
+    }
+
+    function deleteuser(emailid){
+        console.log(emailid);
+        localStorage.removeItem(emailid);
+        removeuserfromscreen(emailid);
+    }
+    function removeuserfromscreen(emailid){
+        const parentnode=document.getElementById('Users');
+        const childnode1=document.getElementById(emailid);
+        parentnode.removeChild(childnode1);
+    }
 
